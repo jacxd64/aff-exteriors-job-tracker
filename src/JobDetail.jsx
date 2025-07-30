@@ -97,6 +97,8 @@ export default function JobDetail() {
   const tl    = [...(job.timeline   || [])].sort((a,b)=>b.createdAt-a.createdAt);
   const docs  = [...(job.documents  || [])].sort((a,b)=>b.createdAt-a.createdAt);
   const pics  = [...(job.photos     || [])].sort((a,b)=>b.createdAt-a.createdAt);
+  // ---- Address fallback (new vs old docs) ----
+  const addressString = job.address || `${job.street}, ${job.city}, ${job.state} ${job.zip}`.replace(/^, | ,/g,"");
 
   ///////////////////////////  Viewer helpers  ////////////////////////////////
   const openViewer = (kind, idx) => setViewer({ open:true, kind, idx });
@@ -113,7 +115,7 @@ export default function JobDetail() {
 
     {/* ---------- Meta fields ---------- */}
     <ul className="detailList narrow">
-      <li><b>Address:</b> {job.address}</li>
+      <li><b>Address:</b> {addressString}</li>
       <li><b>Phone:</b>   {job.phone}</li>
       <li><b>Email:</b>   {job.email}</li>
       <li><b>Start Date:</b> {job.startDate}</li>
