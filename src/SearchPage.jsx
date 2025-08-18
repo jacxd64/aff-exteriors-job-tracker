@@ -1,0 +1,1 @@
+export default () => <div className="centerbox"><h2>Search (coming soon)</h2></div>;

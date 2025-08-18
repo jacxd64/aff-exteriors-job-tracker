@@ -348,3 +348,32 @@ body {
   cursor:pointer;
 }
 
+/* ======================================================================
+   Nav bar
+====================================================================== */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.navbar a:hover { text-decoration: underline; }
+
+.navLogout {
+  border: 0;
+  background: #4f46e5;
+  color: #fff;
+  padding: .3rem .9rem;
+  border-radius: .4rem;
+  cursor: pointer;
+}
+
+.navLogout:hover { background:#6366f1; }

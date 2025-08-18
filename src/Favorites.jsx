@@ -1,0 +1,1 @@
+export default () => <div className="centerbox"><h2>Favorites (coming soon)</h2></div>;
