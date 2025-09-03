@@ -11,6 +11,7 @@ import Favorites from "./Favorites";
 import Calendar from "./Calendar";
 import SearchPage from "./SearchPage";
 import Templates from "./Templates";
+import EditJob from "./EditJob";
 import NavBar from "./NavBar";
 import Login from "./Login";
 import AuthProvider, { useAuth } from "./AuthProvider";
@@ -61,6 +62,7 @@ function Gate() {
         <Route path="/jobs" element={<Directory />} />
         <Route path="/jobs/new" element={<CreateJob />} />
         <Route path="/jobs/:id" element={<JobDetail />} />
+        <Route path="/jobs/:id/edit"   element={<EditJob />} />
 
         {/* placeholder pages */}
         <Route path="/favorites" element={<Favorites />} />
